@@ -633,6 +633,146 @@
                 font-size: 1rem;
             }
         }
+
+        .hero {
+    padding: 5rem 0;
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image {
+    max-width: 100%;
+    width: 320px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.hero-title {
+    font-size: 2.75rem;
+    color: #2d3748;
+    font-weight: bold;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: #4a5568;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    color: #4a5568;
+    line-height: 1.7;
+}
+
+.hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: #3182ce;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #2b6cb0;
+}
+
+.btn-outline {
+    border: 2px solid #3182ce;
+    color: #3182ce;
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background-color: #ebf8ff;
+}
+
+.professional-links {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.professional-links a {
+    color: #4a5568;
+    font-size: 1.3rem;
+    transition: color 0.3s ease;
+}
+
+.professional-links a:hover {
+    color: #3182ce;
+}
+
+.resume-link {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    gap: 0.4rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-content {
+        align-items: center;
+    }
+
+    .hero-image {
+        width: 250px;
+        margin-bottom: 2rem;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .professional-links {
+        justify-content: center;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -655,48 +795,41 @@
         </div>
     </header>
 
-<!-- Professional Hero Section with Image -->
+<!-- Professional Hero Section with Image Left -->
 <section class="hero" id="home">
     <div class="container">
         <div class="hero-grid">
             <!-- Left Column - Image -->
             <div class="hero-image-wrapper">
-                <img src="anika.jpg" alt="Anika's photo" style="width:400px; height:520px;">
+                 <img src="anika.jpg" alt="Anika's photo" style="width:400px; height:520px;">
             </div>
-            
+
             <!-- Right Column - Content -->
             <div class="hero-content">
-                <h1 class="hero-title">Anika </h1>
+                <h1 class="hero-title">Anika Patel</h1>
                 <h2 class="hero-subtitle">Computer Science Student | Full Stack Developer</h2>
-                
-                <div class="hero-description">
-                    <p>Specializing in building scalable web applications and intelligent systems. Currently pursuing advanced studies in AI and machine learning applications.</p>
-                </div>
-                
+                <p class="hero-description">
+                    Passionate about crafting intelligent and scalable web solutions. Currently pursuing specialization in AI and Machine Learning, with hands-on experience in full-stack development.
+                </p>
+
                 <div class="hero-cta">
                     <a href="#projects" class="btn btn-primary">View Projects</a>
                     <a href="#contact" class="btn btn-outline">Contact Me</a>
                 </div>
-                
+
                 <div class="professional-links">
-                    <a href="https://github.com/yourprofile" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://linkedin.com/in/yourprofile" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="mailto:your.email@domain.com" aria-label="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="path/to/resume.pdf" aria-label="Resume" download class="resume-link">
-                        <i class="fas fa-file-alt"></i>
-                        <span>Resume</span>
+                    <a href="https://github.com/yourprofile" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/yourprofile" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:your.email@domain.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="path/to/resume.pdf" aria-label="Resume" class="resume-link" download>
+                        <i class="fas fa-file-alt"></i> <span>Resume</span>
                     </a>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 
     <!-- About Section -->
     <section class="section about" id="about">
